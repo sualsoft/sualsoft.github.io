@@ -1,3 +1,11 @@
-/*
-    You can add your own custom styles here.
-*/
+.home-section {
+    font-family: var(--base-font-family);
+    margin: var(--card-padding) 0;
+    color: var(--card-text-color-main);
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.home-section a {
+    color: var(--card-text-color-main);
+}
