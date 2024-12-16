@@ -1,8 +1,14 @@
-{{ define "main" }} {{ $pages := where .Site.RegularPages "Type" "in"
-.Site.Params.mainSections }} {{ $notHidden := where .Site.RegularPages
-"Params.hidden" "!=" true }} {{ $filtered := ($pages | intersect $notHidden) }}
-{{ $pag := .Paginate ($filtered) }}
+{{ define "main" }}
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+    {{ $filtered := ($pages | intersect $notHidden) }}
+    {{ $pag := .Paginate ($filtered) }}
 
-<article class="home-section main-article">{{.Content}}</article>
+    <section class="home-section">
+        {{.Content}}
+    </section>
 
-{{- partial "pagination.html" . -}} {{- partial "footer/footer" . -}} {{ end }}
+    {{- partial "pagination.html" . -}}
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
