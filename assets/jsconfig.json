@@ -1,12 +1,10 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-            "*": [
-                "*"
-            ]
-        },
-        "lib": ["es2020", "dom"],
-        "jsx": "preserve"
-    }
+ "compilerOptions": {
+  "baseUrl": ".",
+  "paths": {
+   "*": [
+    "../../../home/node/.cache/hugo_cache/modules/filecache/modules/pkg/mod/github.com/!cai!jimmy/hugo-theme-stack/v3@v3.29.0/assets/*"
+   ]
+  }
+ }
 }
