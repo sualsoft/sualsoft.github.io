@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Andrés Gómez</title><link>https://sualsoft.github.io/</link><description>Recent content on Andrés Gómez</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://sualsoft.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Contact</title><link>https://sualsoft.github.io/contact/</link><pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate><guid>https://sualsoft.github.io/contact/</guid><description>&lt;h3 id="address">Address
+&lt;/h3>&lt;p>&lt;strong>ICS-HSG&lt;/strong>
+Rosenbergstrasse 30
+9000 St.Gallen, Switzerland&lt;/p>
+&lt;p>&lt;strong>Email:&lt;/strong> (firstname).(lastname) (at) unisg.ch&lt;/p>
+&lt;h3 id="where-is-the-ics-building">Where is the ICS building?
+&lt;/h3>&lt;iframe width="90%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;amp;source=s_q&amp;amp;hl=en&amp;amp;geocode=&amp;amp;q=+Rosenbergstrasse+30,+9000+St.Gallen,+Switzerland&amp;amp;output=embed" style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; max-width: 100%;">&lt;/iframe>
+&lt;p>You can also contact me via Twitter:&lt;/p></description></item><item><title>Research</title><link>https://sualsoft.github.io/research/</link><pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate><guid>https://sualsoft.github.io/research/</guid><description>&lt;p>Batteryless Systems collect small amounts of sporadic energy from the surrounding environment and use it to perform complex tasks. My research methodology advocates modular and reusable design. In harvesting-based systems, this means decoupling the environment from the application. More precisely, the transducer’s voltage and current are made independent from those in the application circuit. By doing so, it becomes possible to optimize the energy harvesting input and application circuit’s output independently and simultaneously. The design techniques I have proposed proved to be powerful enough to process data streams from sensors and broadcast results wirelessly. Thanks to advanced energy management and distribution mechanisms, this device needs less than 10 micro-Watts of input power to operate. My research in this domain has been applied to commercial, open-source products like the &lt;a class="link" href="https://mirocard.swiss/" target="_blank" rel="noopener"
+>miroCard&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="https://andresgomez.ch/web/wp-content/uploads/2022/01/mirocard_closeup-removebg-preview.png"
+loading="lazy"
+alt="img"
+>&lt;/p>
+&lt;h3 id="physically-enforced-privacy">Physically Enforced Privacy:
+&lt;/h3>&lt;p>Privacy is an ever-growing concern with the proliferation of sensing devices. In the context of mobile devices, for example, battery-powered devices like smartphones can record clear and understandable audio, even if the device is hidden away in a pocket or bag. Mains-powered devices such as Amazon’s Alexa or Google’s Home assistants are designed to continuously listen for activation words before recording audio. However, many phrases can accidentally trigger recordings. Even with privacy protections in place, software-based policies are prone to errors: &lt;a class="link" href="https://mashable.com/article/google-assistant-microphone-smoke-alarm" target="_blank" rel="noopener"
+>accidental updates&lt;/a> have changed the way these devices wake up. All electronic sensing devices, even batteryless ones, need an energy supply to work. Since batteryless sensors operate from the assumption of an intermittent supply, they can efficiently operate when energy is being harvested and also guarantee complete power-down when there is no harvested energy. As such, a simple physical action from a user like covering a solar panel can ensure that the sensing device is completely off and physically unable to operate. In principle, it is very similar to the privacy-enabling camera shutters found in many laptops, but it goes a step further. A simple visual inspection can ensure users that devices cannot physically turn on.&lt;/p>
+&lt;p>&lt;img src="https://andresgomez.ch/web/wp-content/uploads/2022/01/physical_cover_batteryless-552x1024.jpg"
+loading="lazy"
+alt="img"
+>&lt;/p>
+&lt;h3 id="indoor-photovoltaic-harvesting">Indoor Photovoltaic Harvesting:
+&lt;/h3>&lt;p>The first step to understand the possibilities, and limitations of energy-driven sensing, is to quantify the environment’s primary energy. Photovoltaic transducers (i.e., solar cells) are known to have a very high power density. In indoor environments, solar cells produce energy from natural light when close to a window, artificial light when close to lamps, or a combination of the two. In all cases, however, the amount of harvested energy changes in time spans of seconds, minutes, and hours. At ETH Zurich, we initiated a measurement campaign to study indoor photovoltaic harvesting and its variability. The &lt;a class="link" href="https://zenodo.org/record/3715472" target="_blank" rel="noopener"
+>2+ year dataset&lt;/a> gathered in an office building is publicly available. The building’s floor plan shows where the solar cells were deployed with energy measuring devices. The violin plots show the distribution of daily harvested energy at four locations, two of which were close to windows and received more energy: nodes C and D. Even though it is indoors, the effects from the sun are visible: node D, whose window was facing east, received most of its daily energy in the morning, while node C received it in the evening.&lt;/p>
+&lt;p>&lt;img src="https://andresgomez.ch/web/wp-content/uploads/2022/01/floorplan-removebg-preview.png"
+loading="lazy"
+alt="img"
+>&lt;/p>
+&lt;p>&lt;img src="https://andresgomez.ch/web/wp-content/uploads/2022/01/daily_energies-1.png"
+loading="lazy"
+alt="img"
+>&lt;/p>
+&lt;h3 id="real-time-scheduling">Real-Time Scheduling
+&lt;/h3>&lt;p>In the real-time domain, computing systems must not only be functionally correct but also respect precise time constraints. Of the many factors that can affect the response time of these systems, the most influential is the arbitration scheme of limited resources: the scheduling algorithm. For my master thesis, I developed Scheduling Framework For Fast Prototyping (SF3P), an application-level framework for prototyping and composing different real-time schedulers. SF3P introduces a new layer at the application level that implements different scheduling algorithms to be used by SF3P tasks running on top of it. This would not be possible in a standard Linux system because the Linux scheduler is priority-based, and has limited scheduling options. Naturally, since SF3P itself runs on top of the standard pthread library, all algorithms must be implemented using a priority-based mechanism.&lt;/p>
+&lt;p>&lt;img src="https://andresgomez.ch/web/wp-content/uploads/2021/12/sf3p.png"
+loading="lazy"
+alt="img"
+>&lt;/p></description></item><item><title>Teaching</title><link>https://sualsoft.github.io/teaching/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sualsoft.github.io/teaching/</guid><description>&lt;h3 id="courses">Courses
+&lt;/h3>&lt;p>At the University of St. Gallen, I have been a teaching assistant for the following courses:
+&lt;strong>Introduction to Computer Systems and Networking&lt;/strong> (2020-2021)
+&lt;strong>Computer Networks and Distributed Systems&lt;/strong> (2021-2022)
+&lt;strong>Ubiquitous Computing and the Internet of Things&lt;/strong> (2021-2022)&lt;/p>
+&lt;p>At ETH Zurich, I have been a teaching assistant for the following courses:
+&lt;strong>Hardware/Software Codesign&lt;/strong> (2015-2016)
+&lt;strong>VLSI 1&lt;/strong> (2016-2017)
+&lt;strong>P&amp;amp;S – Programming Microcontrollers&lt;/strong> (2015-2017)&lt;/p>
+&lt;p>I have also coordinated the following courses:
+&lt;strong>VLSI 2&lt;/strong> (2015-2018)&lt;/p>
+&lt;h3 id="student-projects">Student Projects
+&lt;/h3>&lt;p>I engage with many student projects on a variety of subjects, ranging from embedded machine learning, energy-driven hardware platforms, and low-power wireless protocols. During my time as a researcher, I have co-advised over 40 bachelor/master student projects. From those projects, roughly one-third have led to a publication co-authored with students. Nine of my advisees successfully transitioned into a PhD program in Switzerland and Germany, and one received an ETH Medal for outstanding work.&lt;/p>
+&lt;p>Selected theses:&lt;/p>
+&lt;ol>
+&lt;li>Simon Benninger. Master thesis. Fall 2019.
+&lt;a class="link" href="https://andresgomez.ch/studentreports/2019_MA_SB.pdf" target="_blank" rel="noopener"
+>&lt;strong>Ultra Low Power Vision Node for Edge Computing&lt;/strong>.&lt;/a>&lt;/li>
+&lt;li>Matthias Leubin. Master thesis. Fall 2017.
+&lt;a class="link" href="https://andresgomez.ch/studentreports/2017_MA_ML.pdf" target="_blank" rel="noopener"
+>&lt;strong>Automated Energy Harvesting Source Characterization&lt;/strong>.&lt;/a>&lt;/li>
+&lt;li>Patroklos Anagnostou. DAS thesis. Fall 2017.
+&lt;a class="link" href="https://andresgomez.ch/studentreports/2017_DA_PA.pdf" target="_blank" rel="noopener"
+>&lt;strong>Smart Energy Management for Transiently Powered IoT Nodes&lt;/strong>.&lt;/a>&lt;/li>
+&lt;li>Seraina Schweizer. Semester thesis. Spring 2017.
+&lt;a class="link" href="https://andresgomez.ch/studentreports/2017_SA_SS.pdf" target="_blank" rel="noopener"
+>&lt;strong>Design of a Hybrid Transient Vision Node&lt;/strong>.&lt;/a>&lt;/li>
+&lt;li>Stefan Lippuner and Matthias Leubin. Semester thesis. Spring 2016.
+&lt;a class="link" href="https://andresgomez.ch/studentreports/2016_SA_SLML.pdf" target="_blank" rel="noopener"
+>&lt;strong>RocketLogger: Mobile Data-Logger for Ultra-Low Current and Power Measurements.&lt;/strong>&lt;/a>&lt;/li>
+&lt;li>Thomas Schalch. Master thesis. Fall 2016.
+&lt;a class="link" href="https://andresgomez.ch/studentreports/2016_MA_TS.pdf" target="_blank" rel="noopener"
+>&lt;strong>Transiently Powered and Wearable Device for Ultra-Low Power Vision Sensing&lt;/strong> .&lt;/a>&lt;/li>
+&lt;/ol></description></item></channel></rss>
