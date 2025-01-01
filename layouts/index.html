@@ -3,6 +3,10 @@
 "Params.hidden" "!=" true }} {{ $filtered := ($pages | intersect $notHidden) }}
 {{ $pag := .Paginate ($filtered) }}
 
-<section class="home-section article-content">{{.Content}}</section>
+<article class="main-article ">
+    <section class="article-content">
+        {{.Content}}
+    </section>
+</section>
 
 {{- partial "pagination.html" . -}} {{- partial "footer/footer" . -}} {{ end }}
